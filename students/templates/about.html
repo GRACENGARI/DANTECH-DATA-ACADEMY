@@ -42,7 +42,7 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="{% static '/img/logo.png' %}" alt=""> -->
         <h1 class="sitename">Dantech Academy</h1>
@@ -57,7 +57,7 @@
           <li><a href="{% url 'events' %}">Events</a></li>
           <li><a href="{% url 'pricing' %}">Pricing</a></li>
 
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          {% comment %} <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -67,19 +67,19 @@
                   <li><a href="#">Deep Dropdown 3</a></li>
                   <li><a href="#">Deep Dropdown 4</a></li>
                   <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
+                </ul> {% endcomment %}
+              {% comment %} </li>
               <li><a href="#">Dropdown 2</a></li>
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
+          </li> {% endcomment %}
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="courses.html">Get Started</a>
+      <a class="btn-getstarted" href="{% url 'courses' %}">Get Started</a>
 
     </div>
   </header>
@@ -221,7 +221,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static '/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static '/img/team/team14.jpg' %}" class="testimonial-img" alt="">
                   <h3>Joel Wanjohi</h3>
                   <h4>Mobileapp Developer</h4>
                   <div class="stars">
@@ -229,7 +229,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                    <span>Dantech Academy delivered a top-notch Data Engineering bootcamp to me as i was transitioning  my career  on time and within budget. Highly recommended!".</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -239,7 +239,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static '/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static '/img/team/team12.jpg' %}" class="testimonial-img" alt="">
                   <h3>Kelvin Kibicho</h3>
                   <h4>Mobileapp Developer</h4>
                   <div class="stars">
@@ -247,7 +247,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                    <span>The hands-on projects and real-world datasets allowed me to apply my learning immediately. I'm now confident in my ability to extract valuable insights from data and make data-driven decisions. I highly recommend  Dantech academy bootcamp to anyone seeking to upskill and embark on a data-driven career.".</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -257,7 +257,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static '/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static '/img/team/team16.jpg' %}" class="testimonial-img" alt="">
                   <h3>Dennis Nganga</h3>
                   <h4>Web developer</h4>
                   <div class="stars">
@@ -265,7 +265,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                    <span>As a web developer, I've always been fascinated by the power of data. Dantech Academy bootcamp provided me with the perfect opportunity to bridge the gap between web development and data science.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -275,7 +275,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static '/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static '/img/team/team13.jpg' %}" class="testimonial-img" alt="">
                   <h3>Peter Njoroge</h3>
                   <h4>Cloud Engineer</h4>
                   <div class="stars">
@@ -283,7 +283,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                    <span>Attending this data bootcamp was a game-changer for me as a Cloud Practitioner. The hands-on projects and real-world applications helped me bridge the gap between data analytics and cloud computing. I now feel confident integrating data-driven solutions into cloud environments, and it's already making a big impact in my career.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -293,7 +293,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{% static '/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static '/img/team/team15.jpg' %}" class="testimonial-img" alt="">
                   <h3>Sharylne Biwott</h3>
                   <h4>Cybersecurity analyst</h4>
                   <div class="stars">
@@ -301,7 +301,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                    <span>My background in cybersecurity provided a strong foundation in understanding data security threats. However, I wanted to deepen my knowledge of data analysis and machine learning to proactively combat these threats. Dantech Academy bootcamp offered the perfect blend of technical skills and practical experience..</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>

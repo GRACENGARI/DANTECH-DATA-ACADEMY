@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    path('newsletter/', views.newsletter_subscribe, name='newsletter_subscribe'),
     path('', views.home, name='home'),
     path('contact/', views.contact, name='contact'),
     path('course-details/', views.course, name='course-details'),
@@ -15,7 +16,8 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('pricing/', views.pricing, name='pricing'),
     path('starter/', views.starter, name='starter'),
-    path('trainers/', views.trainers, name='trainers'),
+    path('trainers/', views.trainer, name='trainers'),
+
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
