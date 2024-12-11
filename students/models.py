@@ -34,7 +34,7 @@ class Pictures(models.Model):
     name = models.CharField(max_length=100)
     tittle = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='pictures')
+    image = models.ImageField(upload_to='pictures/')
     url = models.CharField(max_length=200)
 
 

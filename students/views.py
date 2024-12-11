@@ -3,7 +3,7 @@ from . models import Contact, Student,Organazations,Pictures,Forms
 
 
 
-from django.shortcuts import render
+
 def newsletter_subscribe(request):
     if request.method == 'POST':
         # Process the form data here
@@ -80,22 +80,17 @@ def starter(request):
 def trainer(request):
     pictures = Pictures.objects.all()
     context = {
-        'pictures':Pictures
-        
-        
-        
-      
-      
-        
+        'pictures':pictures 
     }
     return render(request, 'trainers.html',context)
+
 def newsletterform(request):
     forms = Forms.objects.all()
     context ={
         'forms':forms
-        
+    
     }
-    return render(request, 'newsletterform.html')
+    return render(request, 'newsletterform.html',context )
 
 def  newslettersucess(request):
     forms = Forms.objects.all()

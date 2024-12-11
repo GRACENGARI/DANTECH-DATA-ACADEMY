@@ -115,14 +115,10 @@
       <div class="container">
 
         <div class="row gy-5">
-          {% for picture in Pictures %}
-
-
-
-
+          {% for picture in pictures %}
           <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
             <div class="member-img">
-              <img src="{{ picture.image }}" class="img-fluid" alt="">
+              <img src="{{ picture.image.url }}" class="img-fluid" alt="">
               <div class="social">
                 {% comment %} <a href="{{ picture.url }}"><i class="bi bi-twitter-x"></i></a>
                 <a href="{{ picture.url }}"><i class="bi bi-instagram"></i></a> {% endcomment %}
